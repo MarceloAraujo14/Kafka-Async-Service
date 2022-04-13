@@ -8,6 +8,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 
+/***
+ * This class is responsable to send the message to the topic
+ */
+
+
 @Service
 public class Publisher {
 
