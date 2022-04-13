@@ -1,6 +1,9 @@
 package com.mbaraujo.producer.resources;
 
+import com.mbaraujo.avro.schema.Employee;
+import com.mbaraujo.employee.EmployeeDetails;
 import com.mbaraujo.producer.Publisher;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,14 +16,16 @@ public class ProducerController {
 
     private final Publisher publisher;
 
+    @Autowired
     public ProducerController(Publisher publisher) {
         this.publisher = publisher;
     }
 
     @PostMapping("/send")
-    public ResponseEntity<String> sendMessage(@RequestBody String msg){
-        publisher.sendMessage(msg);
-        return ResponseEntity.ok("Mensagem: " + msg + ", enviada com sucesso.");
+    public ResponseEntity<String> sendMessage(@RequestBody EmployeeDetails employee){
+
+        publisher.sendMessage(employee);
+        return ResponseEntity.ok("Employee: " + employee + ", enviada com sucesso.");
 
     }
 }
