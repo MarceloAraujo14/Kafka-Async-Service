@@ -8,6 +8,12 @@ v2 : Send and receive Objects messages. Implementing Avro Schema Registry
 
 #### Producer:
 - Create a application with the follow dependencies using spring initializer: 
-  spring-boot-starter-web
-  spring-boot-starter
-  spring-kafka
+  
+- spring-boot-starter-web
+  
+- spring-boot-starter
+  
+- spring-kafka 
+  
+- avro
+- avro-serializer
