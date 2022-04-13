@@ -4,7 +4,7 @@ On this application I try to communicate two applications throught kafka topic.
 
 Feat: 
 v1 : Send and receive String formatted messages.
-v2 : Send and receive Objects messages.
+v2 : Send and receive Objects messages. Implementing Avro Schema Registry
 
 #### Producer:
 - Create a application with the follow dependencies using spring initializer: 
